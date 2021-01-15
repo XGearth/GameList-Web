@@ -1,0 +1,21 @@
+<h1> Played Games </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Description </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @gamelists.each do |game| %>
+        <tr>
+            <td> <%= game.title %> </td>
+            <td> <%= game.description %> </td>
+            <td> Place Holder </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
