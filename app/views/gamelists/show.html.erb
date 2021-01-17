@@ -2,3 +2,8 @@
 
 <p> <strong> Title: </strong> <%= @gamelist.title %> </p>
 <p> <strong> Description: </strong> <%= @gamelist.description %> </p>
+
+<%= link_to 'Edit', edit_gamelist_path(@gamelist)%>
+<%= link_to 'Delete', gamelist_path(@gamelist), method: :delete, data: { confirm: "Are You Sure?"} %>
+<%= link_to 'Return to Game List', gamelists_path %>
+ 

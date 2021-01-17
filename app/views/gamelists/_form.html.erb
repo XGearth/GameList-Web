@@ -1,0 +1,26 @@
+<% if @gamelist.errors.any? %>
+    <h2> There were some errors in your input. </h2>
+    <ul>
+        <% @gamelist.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_with(model: @gamelist, local: true) do |x| %>
+
+<p>
+    <%= x.label :title %> </br>
+    <%= x.text_field :title %>
+</p>
+
+<p>
+    <%= x.label :description %> </br>
+    <%= x.text_area :description %>
+</p>
+
+<p>
+    <%= x.submit %>
+</p>
+
+<% end %>

@@ -1,28 +1,5 @@
 <h1> What is this Game? </h1>
 
-<% if @gamelist.errors.any? %>
-    <h2> There were some errors in your input. </h2>
-    <ul>
-        <% @gamelist.errors.full_messages.each do |msg| %>
-            <li> <%= msg %> </li>
-        <% end %>
-    </ul>
-<% end %>
+<%= render 'gamelists/form' %>
 
-<%= form_with scope: :gamelist, url:gamelists_path, local:true do |x| %>
-
-<p>
-    <%= x.label :title %> </br>
-    <%= x.text_field :title %>
-</p>
-
-<p>
-    <%= x.label :description %> </br>
-    <%= x.text_area :description %>
-</p>
-
-<p>
-    <%= x.submit %>
-</p>
-
-<% end %>
+<%= link_to 'Return to Game List', gamelists_path %>

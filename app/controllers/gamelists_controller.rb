@@ -1,6 +1,8 @@
 class GamelistsController < ApplicationController
+
+before_action :set_gamelist, only: [:show, :edit, :update, :destroy]
+
     def show
-        @gamelist = Gamelist.find(params[:id])
     end
 
     def index
@@ -12,11 +14,10 @@ class GamelistsController < ApplicationController
     end
 
     def edit
-        @gamelist = Gamelist.find(params[:id])
     end
 
     def create
-        @gamelist = Gamelist.new(params.require(:gamelist).permit(:title, :description))
+        @gamelist = Gamelist.new(define_params)
         
         if @gamelist.save
             flash[:notice] = "Game was recorded successfully."
@@ -27,12 +28,26 @@ class GamelistsController < ApplicationController
     end
 
     def update
-        @gamelist = Gamelist.find(params[:id])
-        if @gamelist.update(params.require(:gamelist).permit(:title, :description))
+        if @gamelist.update(define_params)
             flash[:notice] = "Game Details Updated Successfully!"
             redirect_to @gamelist
         else
             render 'edit'
         end
     end
+
+    def destroy
+        @gamelist.destroy
+        redirect_to gamelists_path
+    end
+end
+
+private
+
+def set_gamelist
+    @gamelist = Gamelist.find(params[:id])
+end
+
+def define_params
+    params.require(:gamelist).permit(:title, :description)
 end
