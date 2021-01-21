@@ -1,0 +1,99 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+    background-color: black !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.homehr{
+    border-color: white !important;
+}
+
+hr{
+    border-color: black !important;
+}
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: lightgrey;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#hompagecontainer {
+    margin-top: 20px;
+}
+
+.homejumbo {
+    background-image: asset-url('Lights.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    background-color: black;
+    flex-shrink: none;
+}
+
+.aboutpic {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 20%;
+}
+
+.aboutcard-body {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.aboutcard {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.showcard {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+}
+
+//--------------------
+//FORM PARTIAL CLASSES
+
+.formjumbo {
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.formlabel{
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+}
+
+.formtext{
+    margin: auto;
+    text-align: center;
+}

@@ -7,20 +7,25 @@
     </ul>
 <% end %>
 
-<%= form_with(model: @gamelist, local: true) do |x| %>
 
-<p>
-    <%= x.label :title %> </br>
-    <%= x.text_field :title %>
-</p>
-
-<p>
-    <%= x.label :description %> </br>
-    <%= x.text_area :description %>
-</p>
-
-<p>
-    <%= x.submit %>
-</p>
-
-<% end %>
+<div class="jumbotron formjumbo text-center">
+    <div class="container">
+        <%= form_with(model: @gamelist, local: true) do |x| %>
+        <div class="form-horizontal">
+            <%= x.label :title, class: "formlabel" %>
+            <%= x.text_field :title, class: "form-row formtext", :size => 25 %>
+        </div>
+        </br>
+        </br>
+        <div class="form-horizontal">
+            <%= x.label :description, class: "formlabel" %>
+            <%= x.text_area :description, class: "form-row formtext", size: "70x5" %>
+        </div>
+        </br>
+        </br>
+        <div class="asd">
+            <%= x.submit class: "btn btn-primary"%>
+        </div>
+        <% end %>
+    </div>
+</div>

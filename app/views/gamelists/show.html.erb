@@ -1,9 +1,15 @@
-<h1> List of Games</h1>
+<h1 class="text-center mt-3 mb-3"> <%= @gamelist.title %> </h1>
 
-<p> <strong> Title: </strong> <%= @gamelist.title %> </p>
-<p> <strong> Description: </strong> <%= @gamelist.description %> </p>
+<div class="card showcard">
+    <div class="card-body showcard-body">
+        <p class ="text-center mt-3 mb-3"> <%= @gamelist.description %> </p>
+    </div>
+</div>
 
-<%= link_to 'Edit', edit_gamelist_path(@gamelist)%>
-<%= link_to 'Delete', gamelist_path(@gamelist), method: :delete, data: { confirm: "Are You Sure?"} %>
-<%= link_to 'Return to Game List', gamelists_path %>
- 
+<div class="row ml-1 mr-1">
+    <p class="ml-3 mt-3">
+        <%= link_to 'Return to Game List', gamelists_path, class: "btn btn-dark" %>
+        <%= link_to 'Edit Game Details', edit_gamelist_path(@gamelist), class: "btn btn-dark" %>
+        <%= link_to 'Delete', gamelist_path(@gamelist), method: :delete, data: { confirm: "Are You Sure?"},  class: "btn btn-dark" %>
+    </p>
+</div>
