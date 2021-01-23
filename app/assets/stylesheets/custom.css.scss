@@ -12,10 +12,6 @@
     border-color: white !important;
 }
 
-hr{
-    border-color: black !important;
-}
-
 #logo {
     float: left;
     font-size: 1.7em;
@@ -96,4 +92,12 @@ body {
 .formtext{
     margin: auto;
     text-align: center;
+}
+
+//--------------------
+//ERRORS PARTIAL CLASS
+
+.errors {
+    margin: auto;
+    width: 60%;
 }

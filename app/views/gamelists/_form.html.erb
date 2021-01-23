@@ -1,12 +1,6 @@
-<% if @gamelist.errors.any? %>
-    <h2> There were some errors in your input. </h2>
-    <ul>
-        <% @gamelist.errors.full_messages.each do |msg| %>
-            <li> <%= msg %> </li>
-        <% end %>
-    </ul>
-<% end %>
-
+<div class="errors text-center">
+    <%= render 'shared/errors' %>
+</div>
 
 <div class="jumbotron formjumbo text-center">
     <div class="container">
@@ -23,9 +17,13 @@
         </div>
         </br>
         </br>
-        <div class="asd">
+        <div>
             <%= x.submit class: "btn btn-primary"%>
         </div>
         <% end %>
     </div>
+</div>
+
+<div class="text-center mb-3">
+    <%= link_to '[ Cancel Edit ]', gamelists_path %>
 </div>

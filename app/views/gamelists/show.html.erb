@@ -6,10 +6,8 @@
     </div>
 </div>
 
-<div class="row ml-1 mr-1">
-    <p class="ml-3 mt-3">
+<div class="mt-3 ml-1 mr-1 text-center">
         <%= link_to 'Return to Game List', gamelists_path, class: "btn btn-dark" %>
         <%= link_to 'Edit Game Details', edit_gamelist_path(@gamelist), class: "btn btn-dark" %>
-        <%= link_to 'Delete', gamelist_path(@gamelist), method: :delete, data: { confirm: "Are You Sure?"},  class: "btn btn-dark" %>
-    </p>
+        <%= link_to 'Delete', gamelist_path(@gamelist), method: :delete, data: { confirm: ("Deleting #{@gamelist.title}. Are You Sure?")},  class: "btn btn-dark" %>
 </div>
